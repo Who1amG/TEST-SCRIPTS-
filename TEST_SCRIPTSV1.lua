@@ -1,6 +1,4 @@
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
+--FIX 
 if getgenv().loaded then 
     return
 end 
@@ -80,7 +78,7 @@ if LPH_OBFUSCATED == nil then
     end
     LRM_IsUserPremium = false
     LRM_LinkedDiscordID = "0"
-    LRM_ScriptName = "bronx.lol"
+    LRM_ScriptName = "WHO1AM"
     LRM_TotalExecutions = 0
     LRM_SecondsLeft = math.huge
     LRM_UserNote = "Developer";
@@ -262,7 +260,7 @@ local FireServer, InvokeServer, UnreliableFireServer = Instance.new("RemoteEvent
 
 if isfunctionhooked then
     if isfunctionhooked(FireServer) or isfunctionhooked(UnreliableFireServer) or isfunctionhooked(InvokeServer) and LPH_OBFUSCATED then
-        return Services.LocalPlayer:Kick("bronx.lol | Security : You are running another script, please disable it and execute again")
+        return Services.LocalPlayer:Kick("WHO1AM | Security : You are running another script, please disable it and execute again")
     end
 end
 
@@ -756,7 +754,7 @@ local Config = {
 end]]
 
 getgenv().library = {
-    directory = "bronx.lol_remastered",
+    directory = "WH01AM_remastered",
     folders = {
         "/fonts",
         "/configs",
@@ -3093,7 +3091,7 @@ do
                         task.wait()
                         if Bike == nil then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Your bike was not found!`,
                                 lifetime = 5
                             })
@@ -3116,7 +3114,7 @@ do
                         task.wait()
                         if Bike == nil then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Your bike was not found!`,
                                 lifetime = 5
                             })
@@ -9874,7 +9872,7 @@ if not Mobile then
         
                 if Server.id == game.JobId then
                     library.notifications:create_notification({
-                        name = "bronx.lol",
+                        name = "WH01AM",
                         info = `You are currently in the smallest server!`,
                         lifetime = 10
                     })
@@ -13973,7 +13971,7 @@ if not Mobile then
     end
 -- \\ Script
 
-local window = library:window({name = "bronx", suffix = ".lol", gameInfo = string.format("bronx.lol : %s", Game_Name:lower())})
+local window = library:window({name = "bronx", suffix = ".lol", gameInfo = string.format("WH01AM : %s", Game_Name:lower())})
 
 if Game_Name == "The Bronx" then
     window:seperator({name = "Game"}) do
@@ -14014,7 +14012,7 @@ if Game_Name == "The Bronx" then
                         pcall(Teleport, OldCFrame)
 
                         library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `Successfully safed {state}!`,
                             lifetime = 5
                         })
@@ -14056,7 +14054,7 @@ if Game_Name == "The Bronx" then
                         pcall(Teleport, OldCFrame)
 
                         library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `Successfully took {state} from safe!`,
                             lifetime = 5
                         })
@@ -14424,7 +14422,7 @@ if Game_Name == "The Bronx" then
                 ManualFarmSections:button({name = "Clean All Filthy Money", callback = LPH_NO_VIRTUALIZE(function()
                     if LocalPlayer.stored.FilthyStack.Value == 0 then 
                         return library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `You have no fucking money poor fuck!`,
                             lifetime = 7.5
                         })
@@ -14437,7 +14435,7 @@ if Game_Name == "The Bronx" then
                     
                     if not Cleaner then
                         return library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `Could not find a valid cleaner!`,
                             lifetime = 7.5
                         })
@@ -14501,7 +14499,7 @@ if Game_Name == "The Bronx" then
                     task.spawn(function()
                         if Cooldown then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Please wait!`,
                                 lifetime = 5
                             })
@@ -14515,7 +14513,7 @@ if Game_Name == "The Bronx" then
 
                         if not Tool then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Could not find a tool! you must hold one.`,
                                 lifetime = 10
                             })
@@ -14653,7 +14651,7 @@ if Game_Name == "The Bronx" then
                     if Check then
                         DeleteSecretUI()
                         library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `Could not find items! Please check you have more than 5000$.`,
                             lifetime = 10
                         })
@@ -14766,7 +14764,7 @@ if Game_Name == "The Bronx" then
                         local Prompt = Workspace:FindFirstChild("GUNS")[self]:FindFirstChildWhichIsA("ProximityPrompt",true);
                         if (Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("GamepassID", true) and not MarketplaceService:UserOwnsGamePassAsync(LocalPlayer.UserId, Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("GamepassID",true).Value)) then 
                             return library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `You do not own this gamepass!`,
                                 lifetime = 5
                             })
@@ -14777,7 +14775,7 @@ if Game_Name == "The Bronx" then
                         local Part = Prompt.Parent:IsA("Part") and Prompt.Parent.CFrame or Prompt.Parent:IsA("MeshPart") and Prompt.Parent.CFrame or Prompt.Parent:IsA("UnionOperation") and Prompt.Parent.CFrame;
                         if LocalPlayer.stored.Money.Value < Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("Price",true).Value then
                             return library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `You are ${Workspace:FindFirstChild("GUNS")[self]:FindFirstChild("Price",true).Value - LocalPlayer.stored.Money.Value} short.`,
                                 lifetime = 5
                             })
@@ -14811,7 +14809,7 @@ if Game_Name == "The Bronx" then
                         task.spawn(Teleport, OldCFrame)
 
                         library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `Successfully purchased {self}!`,
                             lifetime = 5
                         })
@@ -14839,7 +14837,7 @@ if Game_Name == "The Bronx" then
                         Teleport(Config.TheBronx.TeleportationList[state])
 
                         library.notifications:create_notification({
-                            name = "bronx.lol",
+                            name = "WH01AM",
                             info = `Successfully teleported to {state}!`,
                             lifetime = 5
                         })
@@ -15120,7 +15118,7 @@ if Game_Name == "South Bronx" then
 
                             if Teleport_Status == "Failed" then
                                 library.notifications:create_notification({
-                                    name = "bronx.lol",
+                                    name = "WH01AM",
                                     info = `Failed to purchase {self}!`,
                                     lifetime = 7.5
                                 })
@@ -15147,7 +15145,7 @@ if Game_Name == "South Bronx" then
 
                         if not LocalPlayer.Backpack:FindFirstChild(self) and not LocalPlayer.Character:FindFirstChild(self) then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Failed to purchase {self}!`,
                                 lifetime = 7.5
                             })
@@ -15158,13 +15156,13 @@ if Game_Name == "South Bronx" then
                         if not DidntBuy then
                             if suc then
                                 library.notifications:create_notification({
-                                    name = "bronx.lol",
+                                    name = "WH01AM",
                                     info = `Successfully purchased {self}!`,
                                     lifetime = 5
                                 })
                             else
                                 library.notifications:create_notification({
-                                    name = "bronx.lol",
+                                    name = "WH01AM",
                                     info = `Failed to purchase item {self} . error : {err}`,
                                     lifetime = 15
                                 })
@@ -15197,7 +15195,7 @@ if Game_Name == "South Bronx" then
 
                         if TP_Debounce then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Please wait!`,
                                 lifetime = 5
                             })
@@ -15222,7 +15220,7 @@ if Game_Name == "South Bronx" then
                                     Teleport(_Hobo)
                                 else
                                     library.notifications:create_notification({
-                                        name = "bronx.lol",
+                                        name = "WH01AM",
                                         info = `Failed to locate dirty hobo crackhead!`,
                                         lifetime = 5
                                     })
@@ -15271,7 +15269,7 @@ if Game_Name == "South Bronx" then
 
                         if (LocalPlayer.Character.HumanoidRootPart.Position - _Position.Position).Magnitude > 20 then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Failed teleported to {state}!`,
                                 lifetime = 7.5
                             })
@@ -15281,13 +15279,13 @@ if Game_Name == "South Bronx" then
 
                         if suc then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Successfully teleported to {state}!`,
                                 lifetime = 5
                             })
                         else
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Teleportation to {state}. error : {err}`,
                                 lifetime = 15
                             })
@@ -15347,7 +15345,7 @@ if Game_Name == "South Bronx" then
 
                         if (LocalPlayer.Character.HumanoidRootPart.Position - Players[Config.South_Bronx.PlayerUtilities.SelectedPlayer].Character.HumanoidRootPart.Position).Magnitude > 20 then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Failed to teleport to {Config.South_Bronx.PlayerUtilities.SelectedPlayer}!`,
                                 lifetime = 7.5
                             })
@@ -15357,13 +15355,13 @@ if Game_Name == "South Bronx" then
 
                         if Success then
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Successfully teleported to {Config.South_Bronx.PlayerUtilities.SelectedPlayer}!`,
                                 lifetime = 7.5
                             })
                         else
                             library.notifications:create_notification({
-                                name = "bronx.lol",
+                                name = "WH01AM",
                                 info = `Failed to teleport to {Config.South_Bronx.PlayerUtilities.SelectedPlayer}. Error : {Error}`,
                                 lifetime = 10
                             })
